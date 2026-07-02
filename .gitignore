@@ -1,0 +1,23 @@
+#Compiled python bytecode
+__pycache__/
+
+#Compiled Python files
+*.pyc
+
+
+ # Local virtual environments
+.venv/
+venv/
+env/
+
+# IDE specific settings
+.vscode/
+.idea/
+
+# Secrets and environment variables
+.env
+*.env
+
+
+dashboard.db
+.DS_Store

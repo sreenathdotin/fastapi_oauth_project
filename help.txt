@@ -1,0 +1,35 @@
+# Create project folder
+mkdir fastapi_oauth_project
+cd fastapi_oauth_project
+
+# Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+
+# Install required packages
+
+#for installing  passlib[bcrypt] use double quotes as shown below
+pip install "passlib[bcrypt]"
+pip install fastapi uvicorn PyJWT python-multipart
+
+#Creating requirements file.  Do it in venv
+#Method A.  
+pip freeze > requirements.txt
+
+#if method A takes files from computer. Use Method B to take files only from project
+#Method B
+pip install pipreqs
+pipreqs .
+
+#Creating gitignore file
+# For Mac/Linux
+curl -s https://githubusercontent.com -o .gitignore
+
+# For Windows (PowerShell)
+Invoke-WebRequest -Uri "https://githubusercontent.com" -OutFile ".gitignore"
+
+
+
+#echo ".DS_Store" >> .gitignore
+.DS_Store
+git rm --cached .DS_Store
