@@ -1,0 +1,25 @@
+git log --oneline --graph --all
+git log
+git log --oneline
+
+
+git add .gitignore
+git commit -m "fix: remove sensitive secrets, database, and cache files from tracking"
+git push origin main
+
+cat .gitignore
+
+#remove .env from git tracking
+git rm -r --cached __pycache__/ .env dashboard.db
+
+git push origin main
+
+
+git add .gitignore
+git commit -m "fix: remove venv from tracking and update gitignore"
+
+
+cat .gitignore
+
+
+git rm -r --cached venv/
